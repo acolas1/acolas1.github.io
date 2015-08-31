@@ -1,0 +1,139 @@
+/*navigation bar fix*/
+.navbar-text > a {
+	color: inherit;
+	text-decoration: none;
+}
+/*padding for jumbotron*/
+body {
+	padding-top: 78px;
+	padding-bottom: 100px;
+}
+/*font from google fonts for paragraph text*/
+p{
+	font-family: 'Open Sans', sans-serif;
+ }
+ /*font from google fonts for headers*/
+h1, h2, h3, h4,h5,h6{
+	font-family: 'Lobster', cursive;
+}
+
+/*color for navbar*/
+/*Navy Blue*/
+.navbar-default {
+	background-color: #002664;
+	border-color: #FFFFFF;
+	color:#FFFFFF;
+}
+
+/*white letter*/
+.navbar-default .navbar-brand {
+color: #FFFFFF;
+}
+
+/*if hovered color red*/
+.navbar-default .navbar-brand:hover,
+.navbar-default .navber-brand:focus{
+	color: #BB133E;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li >a {
+	color:#FFFFFF;
+}
+
+/*tab selected color red*/
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus{
+	color: #FFFFFF;
+	background-color: #BB133E;
+}
+
+/*link colors red*/
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li >a:focus{
+	color:#BB133E;
+	background-color: transparent;
+}
+
+/*Color for dropdown menu is navy blue and text is white*/
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus{
+	background-color: #002664;
+	color: #FFFFFF;
+}
+/*button color for primary is now Navy Blue*/
+.btn-primary{
+	background-color: #002664;
+	border-color: #002664;
+	color: #FFFFFF;
+}
+
+/*This is the color change so when one hovers over the "primary" color buttons*/
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary{
+	color: #FFFFFF;
+	background-color: #060033;
+	border-color: #0d0066;
+}
+
+/*button color for danger is now red*/
+.btn-danger{
+	background-color: #BB133E;
+	border-color: #BB133E;
+	color: #FFFFFF;
+}
+
+/*This is the color change so when one hovers over the "danger" color buttons*/
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger{
+	color: #FFFFFF;
+	background-color: #190000;
+	border-color: #330000;
+}
+
+/*Will "highlight" to the user that the image is being hovered*/
+.home-thumb img:hover {
+	transform: scale(1.1);
+	-webkit-transform:scale(1.1);
+}
+
+/*makes the transition smoother to 0.3 seconds*/
+.thumbnail img { 
+	transition:all 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+	width:100%;
+}
+
+.thumbnail {
+	-webkit-overflow: all 0.3s ease 0s;
+	overflow: hidden;
+}
+
+/*My jumbotron backgroun image taken from http://www.publicdomainpictures.net/view-image.php?image=14074&picture=cargo-ship*/
+.jumbotron-special {
+	
+	background-image: url('../images/miamiOcean.jpg');
+	color:white;
+	background-attachment: fixed;
+	min-height: 400px;
+	margin-top: 0px;
+	margin-bottom:8px;
+}
+
+.no-para
+{
+	background-color: #F9F9F9 !important;
+}
+
+/*grey background to use so we can distinguish between image and background of white*/
+.background-grey {
+	background-color: #F9F9F9;
+}
