@@ -37,6 +37,7 @@ color: #FFFFFF;
 	background-color: transparent;
 }
 
+/*white navbar default*/
 .navbar-default .navbar-nav > li >a {
 	color:#FFFFFF;
 }
@@ -130,10 +131,11 @@ color: #FFFFFF;
 
 .no-para
 {
-	background-color: #F9F9F9 !important;
+	background-color: #F7F0F0 !important;
 }
 
 /*grey background to use so we can distinguish between image and background of white*/
 .background-grey {
 	background-color: #F9F9F9;
 }
+
