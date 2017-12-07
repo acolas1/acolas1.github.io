@@ -1,234 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Anthony Colas</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="css/custom.css" rel="stylesheet">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Big Data for Bio Applications Course Project </title>
+<meta name="keywords" content="DeBruijn graph,big data" />
+<meta name="description" content="This is a CIS6930 course project website explaining how we went about the project and presents our code here " /> 
+<link rel="Shortcut Icon" href="assets/images/favicon.ico" />
+<link href="assets/css/stylesheet.css" rel="stylesheet" type="text/css" />
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/modernizr.js" type="text/javascript"></script>
+<script src="assets/js/scrollto.js" type="text/javascript"></script>
+<script src="assets/js/jquery.localscroll-min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.bxSlider.min.js" type="text/javascript"></script>
+<script src="assets/js/custom.js" type="text/javascript"></script>
 
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
 
-    <!--Google Fonts-->
-    <!--for name-->
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <!--for paragrpahs-->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<body id="home">
+<!-- Header -->
+<header>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <!--navbar header-->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <!--4 icons for 4 differnt parts of the website-->
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Anthony Colas</a>
-        </div>
-        <div class="navbar-collapse collapse">
+<!-- About -->
+<aside class="about-me" id="aboutDiv">
+<article class="body">
+<hgroup class="group-about float-l">
+<h7><span>Dynamic	DBG: Adding	Dynamic	Vertices</span></h7>
+<br>
+<h7> DeBruijn graphs</h7>
+<p>Bioinformaticians define	 the	 kth-order	 de	 Bruijn	graph	 for	a	 string	 or	 set	 of	 strings	 to	 be	 the	
+  directed	graph	whose	nodes	are	the	distinct	k-tuples	in	those	strings	and	in	which	there	is	an	
+  edge	from	u	to	v	if	there	is	a	(k	+	1)-tuple	somewhere	in	those	strings	whose	prefix	of	length	k	is	
+  u	and	whose	suffix	of	length	k	is	v. These	graphs	have	many	uses	in	bioinformatics,	including	de	
+  novo	 assembly,	 read	 correction	 and	 pan-genomics.	 The	 datasets	 in	 these	 applications	 are	
+  massive	 and	 the	 graphs	 can	 be	 even	 larger,	 however,	 so	 pointer-based	 implementations	 are	
+  impractical.	 </p>
+  
+  <h7>Recent Approaches</h7>
+  <p>
+  Researchers	 have	 suggested	 several	approaches	 to	 representing	 de	 Bruijn	graphs	
+  compactly,	the	two	most	popular	of	which	are	based	on	Bloom	filters	and	the	Burrows-Wheeler
+  Transform,	 respectively.	 		</p>
 
-          <ul id ="nav" class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-            <li class><a href= "#about-me">About</a></li>
-            <li class="dropdown">
-                <!--dropdown menu for Skills-->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
-            
-              <ul class="dropdown-menu">
-                <li class="dropdown-header">Internship(s)</li>
-                <li><a href="#internships">Comm N' Sense</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Skills</li>
-                <li><a href="#skills">Coding Languages</a></li>
-          
-              </ul>
-            </l1>
-            <!--contact link which pops op (easier for people who want to contact me)-->
-            <li><a href="#contact" data-toggle="modal">Contact</a></l1> 
-          </ul> 
-        </div><!--navbar collapse-->
-      </div>
-    </div> 
+</hgroup>
 
-    <!--jumbotron for important info-->
-    <div class="container">
-      <div class="jumbotron jumbotron-special text-center">
-        <h1>Anthony Colas</h1>
-         
-            <!-- From my iphone (my own picture) of my self-->
-            <img class= 'img-circle' src="images/selfie.jpg" alt="Selfie">
-          
-        <p>Birthplace: Miami, FL </p>
-        <p>Major: Computer Engineering</p>
-        <p>Goal: Brain Computer Interface</p>
-      </div>
+<hgroup class="group-pleasure float-l">
+<h7>Base paper</h7>
+<p>In	 a	 recent	 paper	 entitled	 “Fully	 Dynamic	 de	 Bruijn	 Graphs”	 a	 new	
+  approach	to	the	storage	is	described	that	is	based	on	minimal	perfect	hash	functions.		It	is	similar	
+  to	 using	 Bloom	 filters	 but	 has	 better	 theoretical	 bounds	 when	 the	 number	 of	 connected	
+  components	in	the	graph	is	small,	and	is	fully	dynamic:	i.e.,	we	can	both	insert	and	delete	nodes	
+  and	edges	efficiently.</p>
+<h7>Special Thanks</h7>
+<p> Dr. Christina Boucher, for giving us the opportunity to work on this project through a special topics course CIS6930. </p>
+<h7>Interested in checking out our code?</h7>
+<!-- Add project code -->
+<a href="" class="btn-resume">Download Our Project</a>
+<a href="https://docs.google.com/presentation/d/1U25YT9wSujeoQEz4i27yhb5cCTHHcsKaanNfPWxy2N4/edit#slide=id.g2b919e3842_1_78" class="btn-resume">Our Presentation</a>
+</hgroup>
+<hgroup class="group-pic float-r">
+<img src="assets/images/DNA-Matrix.gif" alt="" width="240" height="280" />
+</hgroup>
+</article>
 
-       <!--jumbotron for the About Me section which can be scrolled down to or quick linked from the top right nab-->
-      <div class="jumbotron no-para text-center" id="about-me">
-          
-      <h2><a name ="About">About me</a></h2>
-      <p> I am a 21 year old engineering student at the University of Florida. </p>
-      <p>Some of hobbies include weight lifting, playing video games, reading, and fishing- which for you can see some of my photos above!</p>
-      <p> I one day hope to get into the field of Brain Computer Interface</p>
-      <p> My personal vision is to always look for ways to benefit society at large in an honest and impactful way. I want to help people live healthier and extravagent lives</p>
-    </div>
+</aside>
 
-      <!--Grid system and columns under jumbotron-->
-      <div class="row">
-        <!--four columns on the grid-->
-        <div class="col-md-4">
-          <a href="fishing.html" class="thumbnail home-thumb">
-            <!-- From http://www.publicdomainpictures.net/view-image.php?image=82082&picture=going-fishing-->
-            <img src="images/Fishing.jpg" alt="Fishing Picture">
-          </a>
-          <!--Includes a link to a new page with fishing pictures-->
-          <h3>Fishing</h3>
-          <p>One of my favorite Hobbies is Fishing. Want to see some of my fishing photos?</p>
-          <a href="fishing.html" class="btn btn-danger">View</a>
-        </div>
+<!-- Contact -->
+<aside class="contact-me" id="contactDiv">
+<article class="body">
+<hgroup class="group-about float-l">
+<h7><span>Eureka? Let's discuss.</span></h7>
+<p>Or something similar :P<br/>
+Thanks to everyone who has helped us whenever we had doubts or queries. We improve by sharing ideas and fruitful discussions.
+</hgroup>
+<hgroup class="group-form float-r">
+    <a href="mailto:acolas1@ufl.edu">Anthony Colas </a> <br>
+<a href="mailto:ayushkhandelwal.ak@gmail.com">Ayush Khandelwal </a> <br>
+<a href="mailto:bharish94@gmail.com">Harish Balaji </a> <br>
+<a href="mailto:shubhamshukla@gmail.com">Shubh Shukla </a> 
+</hgroup>
+</article>
+<article id="HidePageContact" class="HidePage"></article>
+</aside>
 
-        <div class="col-md-4">
-          <a href="brainComputerInterface.html" class="thumbnail home-thumb">
-            <!--From http://www.publicdomainpictures.net/view-image.php?image=4035&picture=bright-idea-->
-            <img src="images/brain.jpg" alt="Brain Picture">
-          </a>
-          <!--Link to a new page about BCI-->
-          <h3>Brain Computer Interface</h3>
-          <p>What is Brain Computer Interface and why do I want to study it?</p>
-          <a href="brainComputerInterface.html" class="btn btn-danger">View</a>
-        </div>
-        <!--From http://www.publicdomainpictures.net/view-image.php?image=36523&picture=antique-books-->
-        <!--Link to a Book Database I made with a group in CIS4301-->
-        <div class="col-md-4">
-          <a href="http://cise.ufl.edu/~sw5/Book_Locator/" class="thumbnail home-thumb">
-            <img src="images/books.jpg" alt="Book Locator">
-          </a>
-          <h3>Book locator</h3>
-          <p>I love to read about new things everyday. I made a database application called Book Locator with a group of three other students in CIS4301 (Databases)</p>
-          <a href="http://cise.ufl.edu/~sw5/Book_Locator/" class="btn btn-danger">View</a>
-        </div>
-
-      </div>
-
-      <p></p>
-        <p></p>
-          <p></p>
-      
-    <!--jumbotron for the Internship section which can be scrolled down to or quick linked from the top right nab-->
-      <div class="jumbotron no-para text-center" id="internships">
-      <h2><a name ="CommNSense">Internship(s)</a></h2>
-      <p> I interned at a startup here in Gainesville called Comm N Sense (now called Verigo)</p>
-    <li>I mainly performed Unit Testing</li>
-    <li>I particapted in SCRUM meetings</li>
-    <li>Learned how to work in a small team</li>
-     <p>I learned two major important lessons at the intership:</p>
-    <li>You will always learn while your work</li>
-    <li>How a product gets conceived and built</li>
-  </div>
-
-  <!--jumbotron for the skills section which can be scrolled down to or quick linked from the top right nab-->
-    <div class="jumbotron no-para text-center" id="skills">
-    <h2><a name ="Skills">Skills in Programming</a></h2>
-
-    <!--1st column of the grid system-->
-    <div class="row">
-    <div class="col-md-4">
-    <h3> Know </h4>
-   <ul [b]style="margin-left: -15px;"[/b]>
-  <h4><li>Java</li></h4>
-  <h4><li>SQL</li></h4>
-  <h4><li>C</li></h4>
-  <h4><li>C++</li></h4>
-  <h4><li>VHDL</li></h4>
+<!-- Navigation -->
+<nav class="body">
+<ul class="main-nav float-l">
+<li class="home"><a href="#home" class="active">Home</a></li>
+<li><a class="showhide-about" id="AboutDivLink">About</a>
+</li>
+<li><a class="showhide-contact" id="ContactDivLink">Contact</a></li>
 </ul>
-  </div>
+<ul class="follow-links float-r">
+  <a href="https://github.com/ayushk1995/BioApplicationProject"><li>Follow on  GitHub   </li></a>
 
-<!--Where one can download my Resume (picture to grab one's attention)-->
-<div class="col-md-4">
-          <a href="documents/resume_AMC.pdf" class="thumbnail">
-            <!--http://www.publicdomainpictures.net/view-image.php?image=57474&picture=business-man-in-suit&large=1-->
-            <img src="images/suit.jpg" alt="Suit">
-          </a>
-          <a href="documents/resume_AMC.pdf">Download Resume <i class="fa fa-download"></i></a>
-        </div>
 
-<!--3rd column of the grid system-->
-  <div class="col-md-4">
-  <h3> Learning </h4>
-  <ul>
-  <h4><li>Python</li></h4>
-  <h4><li>Swift</li></h4>
-  <h4><li>MEAN-Full-Stack</li></h4>
-  <h4><li>PHP</li></h4>
+
 </ul>
-</div>
-</div>
+</nav>
+</header>
 
-</div>
-
-
-
-
-    </div>
-
-    <!--Fixed footer-->
-    <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-      <div class="container">
-        <div class="navbar-text pull-left">
-        <p> 2014 Anthony_Colas</p>
-
-        
-        </div>
-        <!--Social media links-->
-        <div class="navbar-text pull-right">
-          <a href="https://www.facebook.com/anthony.colas.129"><i class="fa fa-facebook-official fa-2x"></i></a>
-          <a href="https://instagram.com/acolas1"><i class="fa fa-instagram fa-2x"></i></a>
-          <a href="https://github.com/acolas1"><i class="fa fa-github-alt fa-2x"></i></a>
+<!-- Introduction -->
+<aside id="introduction">
+<article class="body">
+<hgroup>
+<h1 class="brd-btm" align="center">Adding Dynamic Vertices</h1>
+<h2 align="center">The First Task /<br/>
+<strong>Rabin Karp Hashing</strong></h2>
+<h3 align="center" class="mar-top-10">This is essentially the first step in <br/>generating a unique hash value for every distinct kmer.<br/>to browse portfolio.</h3>
+</hgroup>
+<a id="btn-mywork" href="#recent-web">Next Steps</a>
+</article>
+</aside>
 
 
-        </div>
-      </div>
-    </div>
+<aside id="recent-web" class="float-l">
+<article class="body">
+<h4 class="head float-l">The next steps</h4>
+<!-- Left Menu -->
+<ul class="left-menu float-l">
+<li><a href="#recent-web" class="active">In-Out Matrices & Minimal perfect Hashing</a></li>
+<li><a href="#recent-fb">Implementing the forrest for false positives</a></li>
+<li><a href="#recent-iphone">Accomodating for insertions and deletions</a></li>
+</ul>
+<!-- Gallery Section -->
+<section class="web-gallery float-l" id="ShowWebProjectDiv">
+<ul id="web-slider">
+  <li><img src="assets/images/fp.jpg" alt="img" width=600px /></li>
+  <li><img src="assets/images/for.jpg" alt="img" width=600px /></li>
+  <li><img src="assets/images/sc.jpg" alt="img" width=600px/></li>
+</ul>
+</body>
 
-    <!-- Bootstrap Javascript so the pages load faster-->
-    <div class="modal fade" id="contact" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4>Contact</h4>
-          </div>
-          <!--Contact form-->
-          <div class-"modal-body">
-            <p>Please do not hesitate to contact me at acolas@bellsouth.net</p>
-          </div>
-          <div class="modal-footer">
-            <a class="btn btn-primary" data-dismiss="modal">Close x</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/myapp.js"></script>
-  </body>
+
 </html>
